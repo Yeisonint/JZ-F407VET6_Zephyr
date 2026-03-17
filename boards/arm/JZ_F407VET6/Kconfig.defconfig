@@ -1,0 +1,16 @@
+if BOARD_JZ_F407VET6
+
+config BOARD
+	default "BOARD_JZ_F407VET6"
+
+if NETWORKING
+
+config NET_L2_ETHERNET
+	default y
+
+config ETH_STM32_HAL
+	default y
+
+endif # NETWORKING
+
+endif

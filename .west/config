@@ -1,0 +1,6 @@
+[manifest]
+path = app_jz407
+file = west.yml
+
+[zephyr]
+base = zephyr

@@ -1,0 +1,23 @@
+identifier: BOARD_JZ_F407VET6
+name: BOARD_JZ_F407VET6
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 128
+flash: 512
+supported:
+  - counter
+  - usb
+  - netif:eth
+  - i2c
+  - uart
+  - spi
+  - gpio
+  - usb_device
+  - watchdog
+  - backup_sram
+  - can
+
+vendor: custom

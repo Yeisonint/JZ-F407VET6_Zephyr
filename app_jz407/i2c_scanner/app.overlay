@@ -1,0 +1,14 @@
+/ {
+    i2c_sw: i2c_gpio_0 {
+        compatible = "gpio-i2c"; 
+        status = "okay";
+
+        scl-gpios = <&gpioa 6 (GPIO_PULL_UP | GPIO_OPEN_DRAIN)>;
+        sda-gpios = <&gpioa 5 (GPIO_PULL_UP | GPIO_OPEN_DRAIN)>;
+
+        clock-frequency = <100000>; 
+
+        #address-cells = <1>;
+        #size-cells = <0>;
+    };
+};

@@ -1,0 +1,7 @@
+zephyr
+modules
+build/
+**/build/
+.venv
+bootloader
+zephyr-sdk-0.17.4
