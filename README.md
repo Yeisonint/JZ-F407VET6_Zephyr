@@ -1,6 +1,13 @@
 # JZ-F407VET6 Zephyr
 Zephyr RTOS on the JZ-F407VET6 development board (STM32F407).
 
+I based this repository on:
+
+* [JZ-F407VET6](https://github.com/art103/JZ-F407VET6)
+* [zenoh-pico-zephyr](https://github.com/entire/zenoh-pico-zephyr)
+
+And of course, the samples from Zephyr project!.
+
 ## Overview
 
 * Zephyr v4.3.0
