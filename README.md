@@ -5,6 +5,7 @@ I based this repository on:
 
 * [JZ-F407VET6](https://github.com/art103/JZ-F407VET6)
 * [zenoh-pico-zephyr](https://github.com/entire/zenoh-pico-zephyr)
+* [zephyr_driver_propyradio](https://github.com/everedero/zephyr_driver_propyradio)
 
 And of course, the samples from Zephyr project!.
 
@@ -25,15 +26,9 @@ make gcc libsdl2-dev libmagic1
 ```
 
 ### Zephyr SDK
-The SDK contains the toolchains needed to cross-compile for ARM.
-Download and extract SDK v0.17.4
+The SDK contains the toolchains needed to cross-compile.
 ```bash
-wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.4/zephyr-sdk-0.17.4_linux-x86_64.tar.xz
-tar -xvf zephyr-sdk-0.17.4_linux-x86_64.tar.xz
-rm zephyr-sdk-0.17.4_linux-x86_64.tar.xz
-Run setup script
-cd zephyr-sdk-0.17.4/
-./setup.sh
+west sdk install --install-dir $PWD/zephyr-sdk -t arm-zephyr-eabi
 ```
 
 Note: If your board is not recognized by the programmer (ST-Link/J-Link), ensure your udev rules are up to date:

@@ -8,9 +8,9 @@
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
-            "serverpath": "${workspaceFolder}/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd",
-            "gdbPath": "${workspaceFolder}/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb",
-            "armToolchainPath": "${workspaceFolder}/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin",
+            "serverpath": "${workspaceFolder}/zephyr-sdk/sysroots/x86_64-pokysdk-linux/usr/bin/openocd",
+            "gdbPath": "${workspaceFolder}/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb",
+            "armToolchainPath": "${workspaceFolder}/zephyr-sdk/arm-zephyr-eabi/bin",
             "toolchainPrefix": "arm-zephyr-eabi",
             "device": "STM32F407VE",
             "configFiles": [

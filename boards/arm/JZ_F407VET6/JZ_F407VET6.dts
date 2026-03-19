@@ -193,6 +193,7 @@
 	pinctrl-0 = <&spi2_sck_pb10 &spi2_miso_pc2 &spi2_mosi_pc3>;
 	pinctrl-names = "default";
 	cs-gpios = <&gpioe 3 GPIO_ACTIVE_LOW>;
+	clock-frequency = <8000000>;
 	status = "okay";
 
 	w25q64: w25q64jv@0 {

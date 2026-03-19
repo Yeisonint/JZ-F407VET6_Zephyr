@@ -1,0 +1,25 @@
+&spi2 {
+    cs-gpios = <&gpioe 3 GPIO_ACTIVE_LOW>,  /* w25q64 (index 0) */
+               <&gpioe 8 GPIO_ACTIVE_LOW>; /* nrf24 (index 1) */
+
+    radio0: nrf24@1 {
+        compatible = "nordic,nrf24l01";
+        status = "okay";
+        reg = <1>;
+        
+        spi-max-frequency = <500000>;
+        addr-width = <4>;
+        ce-gpios = <&gpioe 7 GPIO_ACTIVE_HIGH>;
+        irq-gpios = <&gpioe 9 GPIO_ACTIVE_LOW>;
+        channel-frequency = <16>;
+        rf-power-attenuation = <18>;
+        lna-gain;
+        tx-address = [e7 e7 e7 e7];
+        payload-fixed-size = <32>;
+        rx-datapipes-number = <2>;
+        rx-datapipe0-address = [e7 e7 e7 e7];
+        rx-datapipe1-address = [de ad de ad];
+        payload-ack;
+        payload-crc;
+    };
+};
