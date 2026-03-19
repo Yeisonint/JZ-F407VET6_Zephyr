@@ -1,0 +1,24 @@
+# SSD1316 display controller configuration options
+
+# Copyright (c) 2026 Yeison Suarez
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig SSD1316
+	bool "SSD1316 display driver"
+	default y
+	depends on DT_HAS_SOLOMON_SSD1316FB_ENABLED
+	select I2C if $(dt_compat_on_bus,$(DT_COMPAT_SOLOMON_SSD1316FB),i2c)
+	select SPI if $(dt_compat_on_bus,$(DT_COMPAT_SOLOMON_SSD1316FB),spi)
+	help
+	  Enable driver for SSD1316 display driver.
+
+if SSD1316
+
+config SSD1316_DEFAULT_CONTRAST
+	int "SSD1316 default contrast"
+	default 128
+	range 0 $(UINT8_MAX)
+	help
+	  SSD1316 default contrast.
+
+endif # SSD1316
