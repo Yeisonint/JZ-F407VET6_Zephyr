@@ -75,6 +75,23 @@ Connect your programmer and run:
 ./flash.sh <APP_FOLDER>
 ```
 
+## Debug in VS code or similars
+
+Install those extension in VS code with `Ctrl+p`.
+
+```text
+ext install marus25.cortex-debug
+ext install rioj7.command-variable
+```
+
+Make sure to add CONFIG_DEBUG_OPTIMIZATIONS to the `prj.conf` application, then flash the board.
+
+```text
+CONFIG_DEBUG_OPTIMIZATIONS=y
+```
+
+![debug](res/debug_test.gif)
+
 ## Troubleshooting
 
 * West Not Found: Ensure your virtual environment is active (source .venv/bin/activate).

@@ -2,9 +2,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "STM32 Zenoh Debug",
+            "name": "STM32 Dynamic Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/ssd1316/zephyr/zephyr.elf",
+            "executable": "${workspaceFolder}/${input:get_current_build}/zephyr/zephyr.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
@@ -20,6 +20,16 @@
             "interface": "swd",
             "showDevDebugOutput": "raw",
             "runToEntryPoint": "main"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "get_current_build",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+                "fileName": "${workspaceFolder}/.current"
+            }
         }
     ]
 }

@@ -5,3 +5,4 @@ build/
 .venv
 bootloader
 zephyr-sdk
+.current
